@@ -1,0 +1,326 @@
+.aboutSection {
+  padding: 80px 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* --- Left Side: Images --- */
+.imageWrapper {
+  position: relative;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 20px;
+}
+
+.tallImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 8px; */
+  min-height: 450px;
+}
+
+.stackedImages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stackedImages img {
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+  /* border-radius: 8px; */
+}
+
+/* --- Badge: Fixed Ring, Rotating Image --- */
+.badgeWrapper {
+  position: absolute;
+  top: 50%;
+  left: 42%; /* Adjusted to center over grid gap */
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* 2. The Rotating Container */
+.rotatingContent {
+  width: 82%;
+  height: 82%;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: rotateBadge 15s linear infinite; /* Only this rotates */
+}
+
+.badgeImage {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes rotateBadge {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Right Side: Content --- */
+.subTitle {
+  display: block;
+  font-family: var(--Font_Heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.highlight {
+  color: var(--Primary_Color);
+}
+.highlightBlue {
+  color: var(--Primary_Color);
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+/* --- Feature Box (Hexagon + Gradient) --- */
+.featureContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  /* Push slightly right to accommodate the overlap */
+  padding-left: 20px;
+}
+
+/* Hexagon Image Container */
+.featureHexagon {
+  width: 180px;
+  height: 140px;
+  flex-shrink: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Must be above the text box */
+  margin-right: -43px; /* Overlap logic */
+
+  /* Creates the Hexagon Shape */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+  /* Add a drop shadow filter because normal box-shadow won't work with clip-path */
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
+}
+
+.featureImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Slightly scale down image inside hexagon if needed */
+  transform: scale(1.1);
+}
+
+/* Gradient Text Box */
+.featureTextBox {
+  flex-grow: 1;
+  /* Gradient from image: Light Blue -> Dark Blue */
+  background: linear-gradient(90deg, #5b86e5 0%, #36d1dc 100%); /* Fallback */
+  background: linear-gradient(
+    to right,
+    #4481eb,
+    #04befe
+  ); /* Adjust closer to image */
+
+  color: white;
+  padding: 25px 30px 25px 60px; /* Left padding creates space for the hexagon */
+
+  /* Rounded Corners only on the right side */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.featureTextBox h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.featureTextBox p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* --- Contact & List --- */
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.checkIcon {
+  color: var(--Primary_Color);
+}
+
+.contactActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.phoneGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.phoneGroup:hover {
+  transform: translateX(5px);
+}
+
+.phoneIconCircle {
+  width: 40px;
+  height: 40px;
+  background-color: var(--Primary_Color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.phoneNumber {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--Primary_Color);
+}
+
+.contactBtn {
+  background-color: var(--Primary_Color);
+  color: white;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.contactBtn:hover {
+  background-color: var(--Primary_Hover);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .imageWrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .actionRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .contactActions {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 28px;
+  }
+
+  /* Stack feature box on mobile */
+  .featureContainer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .featureHexagon {
+    margin-right: 0;
+    margin-bottom: -40px; /* Pull text box up */
+    width: 130px;
+    height: 100px;
+  }
+
+  .featureTextBox {
+    width: 100%;
+    padding: 50px 20px 20px 20px;
+    text-align: center;
+    border-radius: 20px;
+  }
+}
