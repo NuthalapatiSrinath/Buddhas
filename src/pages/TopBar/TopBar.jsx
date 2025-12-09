@@ -259,7 +259,7 @@ const TopBar = () => {
               {mobileServices.map((item) => (
                 <Link
                   key={item}
-                  to={`/service/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  to={`/services/${item.toLowerCase().replace(/\s+/g, "-")}`}
                   className={styles.accordionLink}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
