@@ -1,0 +1,64 @@
+.page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* --- Header Styles --- */
+.header {
+  position: relative;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+}

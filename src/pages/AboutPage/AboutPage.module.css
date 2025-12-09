@@ -1,0 +1,586 @@
+.page {
+  background-color: #fdfdfd;
+  overflow-x: hidden;
+}
+
+/* --- Common Container --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Padding for mobile edges */
+}
+
+/* --- Header --- */
+.pageHeader {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+}
+
+.pageTitle {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* --- Common Typography --- */
+.subTitle {
+  color: #d32f2f;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sectionHeading {
+  font-size: 36px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #d32f2f;
+}
+
+.centerHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headerDesc {
+  color: #666;
+  font-size: 16px;
+}
+
+/* --- Intro Section --- */
+.introSection {
+  padding: 80px 0;
+  background: white;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.introText {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.signatureBlock {
+  margin-top: 30px;
+}
+
+.signatureLine {
+  width: 50px;
+  height: 2px;
+  background: #d32f2f;
+  margin-bottom: 15px;
+}
+
+.ceoName {
+  font-weight: 700;
+  font-size: 18px;
+  color: #222;
+}
+
+.ceoRole {
+  font-size: 14px;
+  color: #666;
+}
+
+.introImageWrapper {
+  position: relative;
+}
+
+.introImage {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: #d32f2f;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(211, 47, 47, 0.3);
+  cursor: default;
+}
+
+.years {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.yearsText {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Mission Section --- */
+.missionSection {
+  padding: 80px 0;
+  background-color: #f4f4f4; /* Full width grey background */
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.missionCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.iconWrapper {
+  width: 70px;
+  height: 70px;
+  background: #fff0f0;
+  color: #d32f2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.cardText,
+.valuesList li {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.valuesList {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.valuesList li {
+  margin-bottom: 10px;
+}
+
+/* --- Industries Section --- */
+.industriesSection {
+  padding: 80px 0;
+  background: white;
+}
+
+.industryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.industryCard {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.industryCard:hover {
+  background: #d32f2f;
+  border-color: #d32f2f;
+  transform: translateY(-5px);
+}
+
+.indIcon {
+  color: #d32f2f;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.industryCard:hover .indIcon {
+  color: white;
+}
+
+.industryCard h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.industryCard:hover h4 {
+  color: white;
+}
+
+/* --- Legacy Timeline (Fixed Dates) --- */
+.legacySection {
+  padding: 80px 0;
+  background: #fafafa;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 2px solid #e0e0e0;
+  padding-left: 30px;
+  margin-left: 150px; /* Add margin to left to fit the date */
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Fix for Dates Touching Circle */
+.timelineYear {
+  position: absolute;
+  left: -130px; /* Moved further left */
+  top: 0;
+  font-weight: 800;
+  font-size: 24px;
+  color: #d32f2f;
+  width: 80px; /* Constrain width */
+  text-align: right; /* Align text to right away from circle */
+}
+
+/* Dot on line */
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -36px; /* -30px padding + -6px adjustment */
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 3px solid #d32f2f;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timelineContent h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.timelineContent p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* --- Advantage Section --- */
+.advantageSection {
+  padding: 80px 0;
+  background: white;
+}
+
+.advantageGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.stepsWrapper {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.stepRow {
+  display: flex;
+  gap: 20px;
+}
+
+.stepNum {
+  font-size: 24px;
+  font-weight: 800;
+  color: #e0e0e0;
+  min-width: 40px;
+}
+
+.stepTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.stepText {
+  font-size: 14px;
+  color: #666;
+}
+
+.advantageImage img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Training Section --- */
+.trainingSection {
+  padding: 80px 0;
+  background: #fdfdfd;
+}
+
+.trainingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.feature {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.checkIcon {
+  color: #d32f2f;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.feature h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.trainingImage img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Team Section --- */
+.teamSection {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.teamCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.teamImgWrapper {
+  height: 250px;
+  overflow: hidden;
+}
+
+.teamImgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.teamCard:hover img {
+  transform: scale(1.05);
+}
+
+.teamInfo {
+  padding: 25px;
+}
+
+.teamInfo h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.teamInfo span {
+  display: block;
+  font-size: 14px;
+  color: #d32f2f;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.teamInfo p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* --- Certifications --- */
+.certSection {
+  background: #1a1a1a;
+  color: white;
+  padding: 60px 0; /* Full width background */
+  text-align: center;
+}
+
+.certContent h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.certContent p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  border: 1px solid #444;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s;
+}
+
+.badge:hover {
+  background: #d32f2f;
+  border-color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .introGrid,
+  .trainingGrid,
+  .advantageGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .missionGrid,
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .introImageWrapper {
+    order: -1;
+  }
+
+  .advantageImage {
+    order: -1;
+  }
+
+  .timeline {
+    margin-left: 20px; /* Adjust margin on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .missionGrid,
+  .teamGrid,
+  .industryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .timelineYear {
+    position: static;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    width: auto;
+  }
+
+  .timelineItem::before {
+    display: none;
+  }
+
+  .pageTitle {
+    font-size: 36px;
+  }
+}

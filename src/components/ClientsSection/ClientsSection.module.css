@@ -1,0 +1,115 @@
+.section {
+  padding: 20px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subTitle {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #d32f2f;
+}
+
+.separator {
+  width: 60px;
+  height: 3px;
+  background: #d32f2f;
+  margin: 0 auto;
+}
+
+/* Carousel Logic */
+.carouselViewport {
+  width: 100%;
+  overflow: hidden; /* Hides the items waiting off-screen */
+  position: relative;
+  /* Adds a subtle fade to the left and right edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+}
+
+.track {
+  display: flex;
+  /* Width and Transform are handled in JSX */
+}
+
+.logoItem {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+
+  /* filter: grayscale(100%); */
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.logoItem:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.logo {
+  max-width: 80%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
+  .logoItem {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    /* filter: grayscale(100%); */
+    opacity: 0.9;
+    transition: all 0.3s ease;
+  }
+}

@@ -1,0 +1,318 @@
+.page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* --- Header with Gradient --- */
+.header {
+  position: relative;
+  height: 350px;
+  /* Dark Red to Black Gradient */
+  background: linear-gradient(135deg, #1a1a1a 0%, #d32f2f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Subtle pattern overlay (optional, purely CSS) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 20%, #000000 150%);
+  opacity: 0.6;
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* --- Container --- */
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* --- Filter Buttons --- */
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.filterBtn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  border-color: #d32f2f;
+  color: #d32f2f;
+}
+
+.filterBtn.active {
+  background: #d32f2f;
+  color: white;
+  border-color: #d32f2f;
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+}
+
+/* --- Grid --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.imageCard {
+  position: relative;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageCard:hover .img {
+  transform: scale(1.1);
+}
+
+/* --- Hover Overlay --- */
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  gap: 10px;
+}
+
+.imageCard:hover .cardOverlay {
+  opacity: 1;
+}
+
+.overlayText {
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+/* --- Highlights Section --- */
+.highlightsSection {
+  background: white;
+  padding: 80px 0;
+  margin-top: 60px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subTitle {
+  color: #d32f2f;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #d32f2f;
+}
+
+.sectionDesc {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.highlightCard {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.highlightCard:hover {
+  transform: translateY(-10px);
+}
+
+.highlightImgWrapper {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlightImgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlightIcon {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #d32f2f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.highlightContent {
+  padding: 30px 25px;
+}
+
+.highlightContent h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.highlightContent p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* --- Video Section with Gradient --- */
+.videoSection {
+  position: relative;
+  height: 400px;
+  /* Professional Blue-Grey Gradient */
+  background: linear-gradient(to right, #232526, #414345);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.videoContent {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.videoContent h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.videoContent p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.playBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.playBtn:hover {
+  transform: scale(1.1);
+}
+
+.playIcon {
+  color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .highlightGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlightGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .videoContent h2 {
+    font-size: 28px;
+  }
+}

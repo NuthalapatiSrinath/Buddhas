@@ -3,31 +3,30 @@ import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./RenderModal.module.css";
 
-// Redux
-// import { closeModal } from "../../redux/slices/modalSlice";
-
 // Components
 import MainModal from "../MainModal/MainModal";
+// 1. Import the new modal
+import ImagePreviewModal from "../ImagePreviewModal/ImagePreviewModal";
 
 function RenderModal() {
   const activeModal = useSelector((state) => state.modal.type);
-  // const dispatch = useDispatch();
-  // const [formValue, setFormValue] = useState("");
-  // const modalData = useSelector((state) => state.modal.modalData);
 
-  const allModals = {};
+  // 2. Register it in the object
+  const allModals = {
+    IMAGE_PREVIEW: <ImagePreviewModal />,
+  };
 
   return (
     <MainModal>
       <AnimatePresence mode="wait">
-        {activeModal && (
+        {activeModal && allModals[activeModal] && (
           <motion.div
             key={activeModal}
             className={styles.RenderModal}
-            initial={{ x: "100%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "100%", opacity: 0 }}
-            transition={{ type: "tween", duration: 0.5, ease: "easeInOut" }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ type: "spring", duration: 0.5 }}
           >
             {allModals[activeModal]}
           </motion.div>

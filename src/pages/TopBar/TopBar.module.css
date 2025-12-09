@@ -88,17 +88,17 @@
 /* 1. Left: Logo */
 .logoLink {
   flex-shrink: 0;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 
 .logo {
-  height: 55px;
+  height: 70px;
   width: auto;
   transition: height 0.3s ease;
 }
 
 .header.scrolled .logo {
-  height: 45px;
+  height: 65px;
 }
 
 /* 2. Middle: Desktop Nav */
@@ -265,7 +265,7 @@
 }
 
 .mobileLogo {
-  height: 45px;
+  height: 65px;
   width: auto;
 }
 

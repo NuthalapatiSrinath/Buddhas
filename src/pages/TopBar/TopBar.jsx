@@ -34,25 +34,21 @@ const TopBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Service Data
+  // ✅ Updated Service Data to match your servicesData.js titles exactly
+  // This ensures the links generated (e.g., /service/security-services) are correct.
   const serviceColumns = [
     [
-      "Security Solutions",
-      "House Keeping Service",
+      "Security Services",
+      "House Keeping",
       "Help Desk Service",
-      "Security Management Systems",
+      "Technical Services",
     ],
+    ["Event Security", "Fire Safety", "Dog Squad", "Electronic Surveillance"],
     [
-      "First Aid Services",
-      "Plumbing & Electrical",
-      "Gardening Services",
-      "Fire Fighting & Safety Services",
-    ],
-    [
-      "Corporate Fraud Investigation",
-      "Risk Assessment Solutions",
-      "Asset Verification",
-      "Security Guards Services",
+      "Cash Management",
+      "Investigation Services",
+      "Pantry Services",
+      "Garden Maintenance",
     ],
   ];
 
@@ -66,10 +62,10 @@ const TopBar = () => {
         <div className={styles.container}>
           <div className={styles.contactInfo}>
             <a
-              href="mailto:enquiry@nsfindiasecurity.com"
+              href="mailto:enquiry@buddha4security.com" // Updated href to match text
               className={styles.infoItem}
             >
-              <Mail size={15} /> enquiry@nsfindiasecurity.com
+              <Mail size={15} /> enquiry@buddha4security.com
             </a>
             <span className={styles.separator}>|</span>
             <a
@@ -109,9 +105,10 @@ const TopBar = () => {
             className={styles.logoLink}
             onClick={() => setIsMobileMenuOpen(false)}
           >
+            {/* Ensure you have a logo file or use the Logo component here */}
             <img
               src="/logo.webp"
-              alt="NSF India Security"
+              alt="Buddhas4 Security"
               className={styles.logo}
             />
           </Link>
@@ -150,9 +147,9 @@ const TopBar = () => {
                     {col.map((item) => (
                       <Link
                         key={item}
-                        to={`/service/${item
+                        to={`/services/${item
                           .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
+                          .replace(/\s+/g, "-")}`} // Generates slug like /service/security-services
                         className={styles.menuLink}
                       >
                         {item}
@@ -163,9 +160,9 @@ const TopBar = () => {
               </div>
             </div>
 
-            <Link to="/blog" className={styles.navItem}>
+            {/* <Link to="/blog" className={styles.navItem}>
               Blog
-            </Link>
+            </Link> */}
             <Link to="/gallery" className={styles.navItem}>
               Gallery
             </Link>
@@ -209,7 +206,7 @@ const TopBar = () => {
         <div className={styles.drawerHeader}>
           <img
             src="/logo.webp"
-            alt="NSF India Security"
+            alt="Buddhas4 Security"
             className={styles.mobileLogo}
           />
           <button
@@ -272,13 +269,13 @@ const TopBar = () => {
             </div>
           </div>
 
-          <Link
+          {/* <Link
             to="/blog"
             className={styles.mobileNavItem}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Blog
-          </Link>
+          </Link> */}
 
           <Link
             to="/gallery"

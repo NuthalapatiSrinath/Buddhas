@@ -1,0 +1,137 @@
+.section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 900px; /* Narrower width for better readability of text */
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.subTitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #d32f2f;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #d32f2f;
+}
+
+.description {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* FAQ List */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faqItem {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.faqItem:hover {
+  border-color: #d32f2f;
+  box-shadow: 0 5px 15px rgba(211, 47, 47, 0.05);
+}
+
+.faqItem.active {
+  border-left: 5px solid #d32f2f; /* Highlight active item */
+}
+
+/* Question Part */
+.questionWrapper {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.iconWrapper {
+  color: #d32f2f;
+  background: #fff0f0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.active .iconWrapper {
+  background: #d32f2f;
+  color: white;
+  transform: rotate(180deg);
+}
+
+/* Answer Part (Collapsible) */
+.answerWrapper {
+  padding: 0 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.active .answerWrapper {
+  padding-bottom: 25px;
+  /* max-height handled inline in JSX for smooth animation */
+}
+
+.answer {
+  color: #666;
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .question {
+    font-size: 16px;
+  }
+
+  .questionWrapper {
+    padding: 15px 20px;
+  }
+}

@@ -1,0 +1,234 @@
+.pageWrapper {
+  background-color: #ffffff;
+}
+
+/* Header */
+.pageHeader {
+  position: relative;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Main Content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left Side Details */
+.subHeading {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #d32f2f;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.mainHeading {
+  font-size: 32px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.highlight {
+  color: #d32f2f;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.detailCard {
+  display: flex;
+  gap: 20px;
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  background: #fff0f0;
+  color: #d32f2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.detailTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.detailText {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.detailText a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.detailText a:hover {
+  color: #d32f2f;
+}
+
+/* Right Side Form */
+.rightSide {
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.inputGroup {
+  width: 100%;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  outline: none;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+
+.inputGroup textarea {
+  resize: vertical;
+}
+
+.submitBtn {
+  background: #d32f2f;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+
+.submitBtn:hover {
+  background: #b71c1c;
+}
+
+/* Map Section */
+.mapSection {
+  margin-top: 0;
+  width: 100%;
+  line-height: 0; /* Removes gap at bottom */
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .rightSide {
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}

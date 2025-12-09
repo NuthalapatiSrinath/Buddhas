@@ -1,25 +1,36 @@
 import React from "react";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import AboutSection from "../../components/AboutSection/AboutSection";
+import StatsSection from "../../components/StatsSection/StatsSection";
 import ProfessionalServices from "../../components/ProfessionalServices/ProfessionalServices";
+import ServiceCarousel from "../../components/ServiceCarousel/ServiceCarousel";
+import ImageMarquee from "../../components/ImageMarquee/ImageMarquee";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
-// Import the new Testimonials
 import Testimonials from "../../components/Testimonials/Testimonials";
+import FAQSection from "../../components/FAQSection/FAQSection";
+import ConnectToUs from "../../components/ConnectToUs/ConnectToUs";
+
+// 1. Import the Clients Section
+import ClientsSection from "../../components/ClientsSection/ClientsSection"; // ✅ NEW
 
 const HomePage = () => {
   return (
     <div>
       <HeroSection />
       <AboutSection />
+      <StatsSection />
       <ProfessionalServices />
+      <ServiceCarousel />
+
       <WhyChooseUs />
 
-      {/* New Testimonials Section */}
-      <Testimonials />
+      {/* 2. Add Clients Section here (e.g., before Testimonials) */}
+      <ClientsSection />
 
-      <div style={{ padding: "50px", textAlign: "center", color: "#666" }}>
-        <p>More sections coming soon...</p>
-      </div>
+      <Testimonials />
+      <FAQSection />
+      <ImageMarquee />
+      <ConnectToUs />
     </div>
   );
 };
