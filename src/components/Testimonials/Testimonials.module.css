@@ -1,0 +1,153 @@
+.section {
+  padding: 100px 0;
+  background-color: white;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Header --- */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subTitle {
+  font-family: var(--Font_Heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--Secondary_Color); /* Orange Accent */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background-color: var(--Primary_Color); /* Blue Accent */
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* --- Grid --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* --- Card Styling --- */
+.card {
+  background-color: #f9fafb; /* Very light gray for contrast against white section */
+  padding: 40px 30px;
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  background-color: white; /* Card becomes white on hover */
+  border-color: #e5e7eb;
+}
+
+/* Quote Icon Animation */
+.quoteIconWrapper {
+  margin-bottom: 20px;
+}
+
+.quoteIcon {
+  color: #d1d5db; /* Light gray initially */
+  transform: scale(1);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.card:hover .quoteIcon {
+  color: var(--Primary_Color); /* Turns Blue on Hover */
+  transform: scale(1.1);
+}
+
+/* Text */
+.reviewText {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+  font-style: italic;
+  margin-bottom: 20px;
+  min-height: 80px; /* Aligns cards if text length varies */
+}
+
+/* Stars */
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Client Info */
+.clientInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.clientImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clientName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.clientRole {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
