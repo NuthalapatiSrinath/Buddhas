@@ -23,11 +23,7 @@ const AboutSection = () => {
           <div className={styles.badgeWrapper}>
             <div className={styles.dashedRing}></div> {/* Static Ring */}
             <div className={styles.rotatingContent}>
-              <img
-                src="/images/logo1.webp"
-                alt="Badge"
-                className={styles.badgeImage}
-              />
+              <img src="logo1.webp" alt="Badge" className={styles.badgeImage} />
             </div>
           </div>
         </div>
